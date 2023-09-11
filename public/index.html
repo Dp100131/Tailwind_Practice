@@ -5,13 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Platzi Travel</title>
     <link rel="stylesheet" href="./css/tailwind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="w-auto h-96 bg-sky-200 flex">
-        <div class="w-1/4 h-1/2 bg-sky-700"></div>
-        <div class="w-1/4 h-1/4 bg-cyan-400"></div>
-        <div class="w-1/4 h-3/4 bg-cyan-700"></div>
-        <div class="w-1/4 h-100 bg-cyan-900"></div>
-    </div>
+    <nav></nav>
+    <div id="tabBar"></div>
+    <section class="w-full h-screen fixed">
+        <div id="home">
+            <div class="w-full h-3/4">
+                <div class="w-full h-full">
+                    <img class="h-full w-full" src="./img/sanFrancisco.jpg" alt="">
+                </div>
+                <div class="w-full h-full absolute top-0 flex flex-col items-center pt-10 space-y-96">
+                    <input class="outline-none p-3 rounded-full shadow-sm" placeholder="San francisco" type="search">
+                    <button class="w-32 text-xl bg-white text-primary font-semibold p-4 rounded-full">
+                        Explorar
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="recomendadas"></div>
+        <div id="rentas_destacadas"></div> 
+    </section>
+    <footer></footer>
 </body>
 </html>

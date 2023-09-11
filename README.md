@@ -46,5 +46,61 @@ npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 ### Flex
 row o column.
 
+```
+<div class="w-96 h-96 bg-gray-100 p-10 m-20 flex flex-col gap-y-4 justify-center items-center">
+    <div class="w-16 h-16 bg-red-300"></div>
+    <div class="w-16 h-16 bg-red-300"></div>
+    <div class="w-16 h-16 bg-red-300"></div>
+    <div class="w-16 h-16 bg-red-300"></div>
+</div>
+```
+
 ### Grid 
 Cuadrícula compuesta de filas y columnas.
+
+## Personalización
+
+```
+tailwind.config.js
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,js}", "./public/**/*.{html,js}"],
+  theme: {
+    fontFamily: {
+      'Montserrat': ["Montserrat", "sans-serif"]
+    },
+    backgroundColor: theme => ({
+      ...theme('colors'),
+      'primary': '#CC2D4A',
+      'secondary': '#8FA206',
+      'tertiary': '#61AEC9',
+    }),
+    textColor: theme => ({
+      ...theme('colors'),
+      'primary': '#CC2D4A',
+      'secondary': '#8FA206',
+      'tertiary': '#61AEC9',
+    }),
+    extend: {
+      backgroundImage: {
+        'sanFrancisco': "url('./public/img/sanFrancisco.jpg')",
+        'sanFranciscoDesktop': "url('./public/img/sanFranciscoDesktop.jpg')",
+        'bali': "url('./public/img/bali.jpg')",
+        'chicago': "url('./public/img/chicago.jpg')",
+        'europe': "url('./public/img/europe.jpg')",
+        'iceland': "url('./public/img/iceland.jpg')",
+        'LA': "url('./public/img/LA.jpg')",
+        'miami': "url('./public/img/miami.jpg')",
+        'new_york': "url('./public/img/new_york.jpg')",
+        'norway': "url('./public/img/norway.jpg')",
+        'seattle': "url('./public/img/seattle.jpg')",
+        'switzerland': "url('./public/img/switzerland.jpg')",
+        'sydney': "url('./public/img/sydney.jpg')",
+        'yosemite': "url('./public/img/yosemite.jpg')",
+      },
+    },
+  },
+  plugins: [],
+}
+```
