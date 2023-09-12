@@ -5,42 +5,16 @@
 @layer components{
 
     .Card{
-        @apply w-48 h-64 flex-none shadow-md rounded-lg transform transition-all hover:-translate-y-4 hover:shadow-xl
-    }
-
-    .Card_Info_Secundary{
-        @apply w-full h-2/5 bg-secondary px-4 py-2 rounded-b-lg
-    }
-
-    .Card_text_title_secundary{
-        @apply text-white font-bold text-lg
-    }
-
-    .Card_text_info_secundary{
-        @apply text-white text-lg
-    }
-
-    .Card_Info_terciary{
-        @apply w-full h-2/5 bg-white px-4 py-2 rounded-b-lg
-    }
-
-    .Card_text_title_terciary{
-        @apply text-tertiary font-bold text-lg
-    }
-
-    .Card_text_info_terciary{
-        @apply text-tertiary text-lg
-    }
-
-    .Tittle_Trending{
-        @apply text-3xl px-8 pt-8 pb-2 font-semibold text-white
-    }
-
-    .FAQs_Tittle{
-        @apply text-xl font-medium text-primary
+        @apply w-48 h-64 flex-none shadow-md rounded-lg transform transition-all hover:-translate-y-4 hover:shadow-xl 
     }
     
-    .FAQs_Info{
-        @apply font-medium pt-2
+    .CardTitle{
+        @apply text-3xl px-8 pt-8 pb-1 font-semibold text-white 
     }
 }
+
+@layer utilities {
+	.scrollbar::-webkit-scrollbar {
+	  background: transparent
+	}
+ }
